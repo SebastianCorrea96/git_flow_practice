@@ -13,7 +13,7 @@ jobs:
       id: imprimir
       env:
         MI_VARIABLE: Hello people del segundo paso
-      run: echo "::set-output name=respuesta::${MI_VARIABLLE}"
+      run: echo "::set-output name=respuesta::${MI_VARIABLE}"
 
   Mi-segundo-job:
     needs: Mi-primer-job
