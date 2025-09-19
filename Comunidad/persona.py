@@ -2,7 +2,7 @@ import datetime
 # from Comunidad.base import Session, engine, Base
 # from sqlalchemy import Column, Integer, String
 
-class Persona(Base):
+class Persona:
 
 #    __tablename__ = 'persona'
 #    id = Column(Integer, primary_key=True)
