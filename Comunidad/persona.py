@@ -1,13 +1,13 @@
 import datetime
-from Comunidad.base import Session, engine, Base
-from sqlalchemy import Column, Integer, String
+# from Comunidad.base import Session, engine, Base
+# from sqlalchemy import Column, Integer, String
 
 class Persona(Base):
 
-   __tablename__ = 'persona'
-   id = Column(Integer, primary_key=True)
-   nombre = Column(String)
-   edad = Column(Integer)
+#    __tablename__ = 'persona'
+#    id = Column(Integer, primary_key=True)
+#    nombre = Column(String)
+#    edad = Column(Integer)
 
    def __init__(self, nombre, edad):
        self.nombre = nombre
@@ -32,17 +32,17 @@ class Persona(Base):
        else:
            return (anio_actual - self.edad + 1)
 
-   def almacenar(self):
-       Base.metadata.create_all(engine)
-       session = Session()
-       session.add(self)
-       session.commit()
-       session.close()
+#    def almacenar(self):
+#        Base.metadata.create_all(engine)
+#        session = Session()
+#        session.add(self)
+#        session.commit()
+#        session.close()
 
-   def recuperar(self, nombre, edad):
-       session = Session()
-       persona = session.query(Persona).filter(Persona.nombre == nombre and Persona.edad == edad).first()
-       session.close()
-       self.nombre = persona.nombre
-       self.edad = persona.edad
-       self.id = persona.id
+#    def recuperar(self, nombre, edad):
+#        session = Session()
+#        persona = session.query(Persona).filter(Persona.nombre == nombre and Persona.edad == edad).first()
+#        session.close()
+#        self.nombre = persona.nombre
+#        self.edad = persona.edad
+#        self.id = persona.id
